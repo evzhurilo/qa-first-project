@@ -10,6 +10,7 @@ public class AppleTest extends BaseTest {
         MainPage mainPage = new MainPage();
         mainPage.openWebSite(BASE_URL);
         mainPage.clickOnSearch();
+        mainPage.search(SEARCH_REQUEST);
     }
 
 }
