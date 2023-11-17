@@ -6,9 +6,9 @@ public class AppleTest extends BaseTest {
     private final static String SEARCH_REQUEST = "iphone 13";
 
     @Test
-    public void checkHrefArticle(){
-        MainPage mainPage = new MainPage(BASE_URL);
-//        mainPage.openWebSite(BASE_URL);
+    public void checkHrefArticle() {
+        MainPage mainPage = new MainPage();
+        mainPage.openWebSite(BASE_URL);
         mainPage.clickOnSearch();
     }
 
