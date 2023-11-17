@@ -27,9 +27,10 @@ public class MainPage {
      * Making search between articles and pushing ENTER button
      * @param searchText
      * */
-    public void search(String searchText) {
+    public FoundPage search(String searchText) {
         textBoxInput.setValue(searchText);
         textBoxInput.sendKeys(Keys.ENTER);
+        return new FoundPage();
     }
 
     public void openWebSite(String url) {

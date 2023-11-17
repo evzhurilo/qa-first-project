@@ -9,12 +9,10 @@ public class AppleTest extends BaseTest {
     @Test
     public void checkHrefArticle() {
         MainPage mainPage = new MainPage();
-        FoundPage foundPage = new FoundPage();
 
         mainPage.openWebSite(BASE_URL);
         mainPage.clickOnSearch();
-        mainPage.search(SEARCH_REQUEST);
-        String href = foundPage.getHrefFromFirstArticle().toLowerCase();
+        String href = mainPage.search(SEARCH_REQUEST).getHrefFromFirstArticle().toLowerCase();
 
         Assertions.assertTrue(href.contains("iphone"));
     }
