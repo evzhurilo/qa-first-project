@@ -14,11 +14,9 @@ public class AppleTest extends BaseTest {
         mainPage.openWebSite(BASE_URL);
         mainPage.clickOnSearch();
         mainPage.search(SEARCH_REQUEST);
-        String string = foundPage.getHrefFromFirstArticle();
-        boolean contains = foundPage.getHrefFromFirstArticle().toLowerCase().contains("iphone");
-        System.out.println(contains);
+        String href = foundPage.getHrefFromFirstArticle().toLowerCase();
 
-        Assertions.assertTrue(contains);
+        Assertions.assertTrue(href.contains("iphone"));
     }
 
 }
