@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class AppleTest extends BaseTest {
@@ -8,9 +9,16 @@ public class AppleTest extends BaseTest {
     @Test
     public void checkHrefArticle() {
         MainPage mainPage = new MainPage();
+        FoundPage foundPage = new FoundPage();
+
         mainPage.openWebSite(BASE_URL);
         mainPage.clickOnSearch();
         mainPage.search(SEARCH_REQUEST);
+        String string = foundPage.getHrefFromFirstArticle();
+        boolean contains = foundPage.getHrefFromFirstArticle().toLowerCase().contains("iphone");
+        System.out.println(contains);
+
+        Assertions.assertTrue(contains);
     }
 
 }
