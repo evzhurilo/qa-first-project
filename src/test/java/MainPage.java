@@ -2,8 +2,6 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.checkerframework.checker.units.qual.N;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selenide.$x;

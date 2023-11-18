@@ -3,8 +3,8 @@ import org.junit.jupiter.api.Test;
 
 public class AppleTest extends BaseTest {
 
-    private final static String BASE_URL = "https://appleinsider.ru/?s=iphone&submit=";
-    private final static String SEARCH_REQUEST = "iphone 13";
+    private final static String BASE_URL = "https://appleinsider.ru";
+    private final static String SEARCH_REQUEST = "iphone";
 
     @Test
     public void checkHrefArticle() {
@@ -14,7 +14,7 @@ public class AppleTest extends BaseTest {
         mainPage.clickOnSearch();
         String href = mainPage.search(SEARCH_REQUEST).getHrefFromFirstArticle().toLowerCase();
 
-        Assertions.assertTrue(href.contains("iphone"));
+        Assertions.assertTrue(href.contains("3"));
     }
 
 }
